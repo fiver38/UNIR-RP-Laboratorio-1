@@ -1,0 +1,15 @@
+{
+  "defaultDomain": "dominio.pddl",
+  "defaultOptions": "",
+  "cases": [
+    {
+      "description": "Original problem file",
+      "problem": "prob_valida_tren.pddl"
+    },
+    {
+      "label": "0.001: after (mover tren-1 pto-1 alm-1) ",
+      "description": "Test case for planning from: \nTime point: 0.001 and after the application of \nAction: mover tren-1 pto-1 alm-1 ",
+      "problem": "prob_valida_tren_0.001_mover_tren-1_pto-1_alm-1.pddl"
+    }
+  ]
+}

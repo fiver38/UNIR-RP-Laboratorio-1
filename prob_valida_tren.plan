@@ -1,0 +1,8 @@
+;;!domain: transportacion
+;;!problem: valida-tren
+
+0.00100: (mover tren-1 pto-1 ciu-1)
+0.00200: (mover tren-1 ciu-1 fab-2)
+
+; Makespan: 0.002
+; Metric: 0.002

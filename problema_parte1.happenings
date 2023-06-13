@@ -1,0 +1,7 @@
+;;!domain: transportacion
+;;!problem: problema_transportacion
+
+0.001: (mover tren-1 pto-1 alm-1)
+
+; Makespan: 0.001
+; Metric: 0.001
