@@ -1,0 +1,18 @@
+{
+    "defaultDomain": "dominio.pddl",
+    "defaultOptions": "",
+    "cases": [
+      {
+        "description": "Original problem file",
+        "problem": "problema_parte1.pddl"
+      },      
+      {
+        "description": "Validation problem file",
+        "problem": "prob_valida_tren.pddl"
+      },
+      {
+        "description": "Validation problem file",
+        "problem": "prob_valida_puerto.pddl"
+      }
+    ]
+  }

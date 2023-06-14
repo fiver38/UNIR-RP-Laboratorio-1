@@ -7,9 +7,14 @@
       "problem": "prob_valida_tren.pddl"
     },
     {
-      "label": "0.001: after (mover tren-1 pto-1 alm-1) ",
-      "description": "Test case for planning from: \nTime point: 0.001 and after the application of \nAction: mover tren-1 pto-1 alm-1 ",
-      "problem": "prob_valida_tren_0.001_mover_tren-1_pto-1_alm-1.pddl"
+      "label": "0.001: after (mover tren-1 pto-1 ciu-1) ",
+      "description": "Test case for planning from: \nTime point: 0.001 and after the application of \nAction: mover tren-1 pto-1 ciu-1 ",
+      "problem": "prob_valida_tren_0.001_mover_tren-1_pto-1_ciu-1.pddl"
+    },
+    {
+      "label": "0.002: after (mover tren-1 ciu-1 fab-2) ",
+      "description": "Test case for planning from: \nTime point: 0.002 and after the application of \nAction: mover tren-1 ciu-1 fab-2 ",
+      "problem": "prob_valida_tren_0.002_mover_tren-1_ciu-1_fab-2.pddl"
     }
   ]
 }

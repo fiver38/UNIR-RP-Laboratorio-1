@@ -1,4 +1,4 @@
-(define (problem valida-tren)
+(define (problem valida-puerto)
     (:domain transportacion)
     (:objects
         Pto-1 - localizacion
@@ -6,6 +6,7 @@
         Ciu-1 - localizacion
         Fab-1 Fab-2 - localizacion
         Tren-1 - transporte
+        Ctn-1 - carga
     )
 
     (:init
@@ -19,12 +20,13 @@
         (via Fab-1 Fab-2)
         (via Fab-1 Alm-1)
         (via Alm-1 Fab-1)
+        (cargado Ctn-1 Pto-1)
         (estacionado Tren-1 Pto-1)
     )
 
     (:goal
         (and
-            (estacionado Tren-1 Fab-2)
+            (cargado Ctn-1 Alm-1)
         )
     )
 )
