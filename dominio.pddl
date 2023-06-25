@@ -5,15 +5,19 @@
         carga
         transporte
         localizacion
+        capacidad
     )
 
     (:predicates
         (via ?x ?y - localizacion)
         (estacionado ?x - transporte ?y - localizacion)
         (cargado ?obj - carga ?x - localizacion)
+        (lleva ?obj - carga ?x - transporte)
+        (espacio ?obj - localizacion ?x - capacidad)
+        (secuencia ?x ?y - capacidad)
     )
 
-    (:action mover
+    (:action moverTransporte
         :parameters (?obj - transporte ?x ?y - localizacion)
         :precondition (and
             (estacionado ?obj ?x)
@@ -24,26 +28,30 @@
         )
     )
 
-    (:action cargar
-        :parameters (?obj - carga ?x - transporte ?y - localizacion)
+    (:action cargarContenedor
+        :parameters (?obj - carga ?x - transporte ?y - localizacion ?z1 ?z2 - capacidad)
         :precondition (and
-            (cargado ?obj ?x)
+            (lleva ?obj ?x)
             (estacionado ?x ?y)
+            (secuencia ?z1 ?z2)
+            (espacio ?y ?z2)
         )
         :effect (and
             (cargado ?obj ?y)
-            (not (cargado ?obj ?x))
+            (not (lleva ?obj ?x))
+            (espacio ?y ?z2)
+            (not (espacio ?y ?z1))
         )
     )
 
-    (:action descargar
-        :parameters (?obj - carga ?x - transporte ?y - localizacion)
+    (:action descargarContenedor
+        :parameters (?obj - carga ?y - localizacion ?x - transporte)
         :precondition (and
             (cargado ?obj ?y)
             (estacionado ?x ?y)
         )
         :effect (and
-            (cargado ?obj ?x)
+            (lleva ?obj ?x)
             (not (cargado ?obj ?y))
         )
     )
